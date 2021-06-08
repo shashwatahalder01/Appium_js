@@ -23,6 +23,7 @@ describe('Home page tests', () => {
         await homepage.clickMenu();
         await delay(5000);
         console.log("Waited 5s");
+    
         // expect(await (await homepage.mode).waitForDisplayed({ timeout: data.threeSeconds })).equal(true);
     });
 

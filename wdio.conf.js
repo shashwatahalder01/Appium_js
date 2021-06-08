@@ -1,3 +1,4 @@
+var date = new Date().toISOString();
 exports.config = {
     //
     // ====================
@@ -27,7 +28,9 @@ exports.config = {
     // will be called from there.
     //
     specs: [
-        './test/specs/**/*.js'
+        // './test/specs/**/*.js'
+        './test/specs/click _add.js'
+        
     ],
     // Patterns to exclude.
     exclude: [
@@ -58,12 +61,13 @@ exports.config = {
     capabilities: [{
         maxInstances: 1,
         platformName: 'Android',
-        
-        'appium:platformVersion': '11',
-        'appium:deviceName': 'emulator-5554',
+        // 'appium:platformVersion': '11',
+        // 'appium:platformVersion': '9',
+        // 'appium:deviceName': 'emulator-5554',
+        'appium:deviceName': '2220c33e10037ece',
         // 'appium:browserName': '',                        // browser name is empty for native apps
-        // 'appium:orientation': 'PORTRAIT',
-        'appium:app':'/home/rk/VScodeProjects/Appium_js/Apk/evaly.apk',          // Path to your native app
+        'appium:orientation': 'PORTRAIT',
+        'appium:app':'/home/shashwata/sh-qups/Appium_js/Apk/evaly.apk',          // Path to your native app
         'appium:appPackage': 'bd.com.evaly.evalyshop',  // Package name of your app
         'appium:appActivity': 'bd.com.evaly.evalyshop.ui.main.MainActivity', // App activity of the app 
         //'appium:app': join(process.cwd(), './ApiDemos-debug.apk')
@@ -143,11 +147,18 @@ exports.config = {
     // reporters: ['spec'],
 
     // reporters: [['allure', {
-    //     outputDir: 'allure-results',
+    //     outputDir: 'allure-report/'+date,
     //     disableWebdriverStepsReporting: true,
     //     disableWebdriverScreenshotsReporting: true,
     // }]],
+    reporters: [['allure', {
+        outputDir: 'allure-results/',
+        disableWebdriverStepsReporting: true,
+        disableWebdriverScreenshotsReporting: true,
+    }]],
     
+
+
     //
     // Options to be passed to Mocha.
     // See the full list at http://mochajs.org/

@@ -1,5 +1,7 @@
 # Appium_Js
 
+## change Apk path
+
 ## run all tests
     
     $ npx wdio run wdio.conf.js
@@ -13,6 +15,7 @@
 ## run single test
 
     $ npx wdio run ./wdio.conf.js --spec file_name
+
     $ npx wdio run ./wdio.conf.js --spec click_menu.js
     $ npx wdio run ./wdio.conf.js --spec click_newsfeed.js
     $ npx wdio run ./wdio.conf.js --spec click_account.js
